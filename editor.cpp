@@ -1,5 +1,5 @@
 #include "editor.h"
-#include "startnew.cpp"
+#include "startnew.h"
 #include "import.h"
 #include "export.h"
 #include "creategraph.h"
