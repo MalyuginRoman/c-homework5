@@ -7,7 +7,15 @@ project(gr_editor VERSION ${PROJECT_VERSION})
 
 configure_file(version.h.in version.h)
 
-add_executable(gr_editor_cli main.cpp)
+add_executable(gr_editor_cli main.cpp
+creategraph.cpp creategraph.h
+deletegraph.cpp deletegraph.h
+editor.cpp editor.h
+export.cpp export.h
+import.cpp import.h
+interface.cpp interface.h
+startnew.cpp startnew.h)
+
 add_library(gr_editor_lib lib.cpp)
 set_target_properties(gr_editor_cli gr_editor_lib PROPERTIES
     CXX_STANDARD 14
