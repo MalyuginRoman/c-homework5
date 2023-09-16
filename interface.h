@@ -15,5 +15,6 @@ class Interface
                       Export expDoc,
                       CreateGraph newEl,
                       DeleteGraph delEl);
-    int StartInterface();
+    int ReadCommand();
+    void StartInterface();
 };
