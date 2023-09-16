@@ -17,9 +17,10 @@ void Editor::run()
     Interface inter;
 
     bool result = true;
-    int command = inter.StartInterface();
+    inter.StartInterface();
     while (result)
     {
+        int command = inter.ReadCommand();
         result = inter.RunInterface(command, newDoc, impDoc, expDoc, newEl, delEl);
     }
     
