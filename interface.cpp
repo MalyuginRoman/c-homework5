@@ -48,7 +48,7 @@ bool Interface::RunInterface(int command,
     return result;
 }
 
-int Interface::StartInterface()
+void Interface::StartInterface()
 {
     std::cout << "What do you want?" << std::endl;
     std::cout << "- S: start new document" << std::endl;
@@ -57,7 +57,10 @@ int Interface::StartInterface()
     std::cout << "- C: create new graph element" << std::endl;
     std::cout << "- D: delete graph element" << std::endl;
     std::cout << "- N: exit" << std::endl;
-    
+}
+
+int Interface::ReadCommand()
+{    
     std::string command;
     std::cin >> command;
     if(command == "S") return 1;
