@@ -5,6 +5,7 @@
 #include "export.h"
 #include "creategraph.h"
 #include "deletegraph.h"
+#include "document.h"
 
 bool Interface::RunInterface(int command,
                              StartNew newDoc,
@@ -14,9 +15,12 @@ bool Interface::RunInterface(int command,
                              DeleteGraph delEl)
 {
     bool result = false;
+    //Document current_doc = new Document;
     switch(command)
     {
         case 1:
+            doc = new Document("Default name");
+            std::cout << "Create new document with Default name" << std::endl;
             newDoc.StartNewDocument();
             result = true;
             break;
@@ -29,10 +33,12 @@ bool Interface::RunInterface(int command,
             result = true;
             break;
         case 4:
+            doc->addPrimitive(new line);
             newEl.CreateGraphElement();
             result = true;
             break;
         case 5:
+            doc->deletePrimitive();
             delEl.DeleteGraphElement();
             result = true;
             break;
