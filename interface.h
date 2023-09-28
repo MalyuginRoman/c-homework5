@@ -5,10 +5,11 @@
 #include "export.h"
 #include "creategraph.h"
 #include "deletegraph.h"
+#include "document.h"
 
 class Interface
 {
-    public:
+public:
     bool RunInterface(int command,
                       StartNew newDoc,
                       Import impDoc,
@@ -17,4 +18,6 @@ class Interface
                       DeleteGraph delEl);
     int ReadCommand();
     void StartInterface();
+private:
+    Document* doc;
 };
